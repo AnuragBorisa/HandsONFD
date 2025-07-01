@@ -1,5 +1,4 @@
 # HandsONFD
-# StackForge
 
 A repository of 30 practical challenges—10 in JavaScript, 10 in React, and 10 in Node.js—designed to develop and demonstrate full-stack engineering skills through hands-on practice and portfolio-ready solutions.
 
@@ -24,7 +23,7 @@ A repository of 30 practical challenges—10 in JavaScript, 10 in React, and 10 
 
 ## Overview
 
-StackForge provides a structured approach to mastering full-stack development by solving real-world problems. Each challenge emphasizes clean code, testing, documentation, and performance considerations, culminating in a professional portfolio of completed projects.
+HandsONFD provides a structured approach to mastering full-stack development by solving real-world problems. Each challenge emphasizes clean code, testing, documentation, and performance considerations, culminating in a professional portfolio of completed projects.
 
 ---
 
@@ -33,8 +32,8 @@ StackForge provides a structured approach to mastering full-stack development by
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/StackForge.git
-   cd StackForge
+   git clone https://github.com/your-username/HandsONFD.git
+   cd HandsONFD
    ```
 2. **Install dependencies** (if applicable)
 
