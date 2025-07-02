@@ -71,4 +71,5 @@ export function throttle(fn,wait=0,leading=true,traling=true){
         }
 
     }
+    return throttled
 }
