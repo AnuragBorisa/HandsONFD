@@ -55,5 +55,50 @@ function curry_placeHolder(fn){
     return curried;
 }
 
+// recurvise compose 
 
+function pipe(...fns){
+    if(fns.length === 0){
+        return x=>x
+    }
+    if(fns.length ===1 ){
+        return fns[0]
+    }
+    const [first,...rest] = fns
+    restPipe = pipe(...rest)
+    return (arg) => {
+        const afterFirst = first(arg)
+        return restPipe(afterFirst)
+    }
+}
+
+function compose(...fns){
+    if(fns.length === 0){
+        return x=>x
+    }
+    if(fns.length ===1 ){
+        return fns[0]
+    }
+    const last = fns[fns.length-1]
+    const rest = fns.slice(0,-1)
+    const restCompose = compose(...rest)
+    return (arg) =>{
+        afterLast = last(arg)
+        return restCompose(afterLast)
+    }
+}
+
+// compose and pipe using reduce method 
+
+function compose(...fns){
+    return (initial) => {
+        fns.reduceRight((acc,fn)=>fn(acc),initial)
+    }
+}
+
+function pipe(...fns){
+    return (initial) => {
+        fns.reduce((acc,fn)=>fn(acc),initial)
+    }
+}
 
