@@ -26,3 +26,34 @@ function curry_better(fn){
     return _curried
 }
 
+function curry_placeHolder(fn){
+    let arity = fn.length;
+    function curried(...args){
+       const realCount = args.filter((a)=>a!==_).length
+       if(realCount.length >=arity && args.slice(0,arity).every(a => a!==_)){
+        return fn(...args.slice(0,arity))
+       }
+       else{
+        return (...next) => {
+            let merged = []
+            let nextIdx = 0;
+            for(let i=0;i<next.length;i++){
+                if(args[i]==_ && nextIdx < next.length ){
+                    merged.push(next[nextIdx++])
+                }
+                else{
+                    merged.push(args[i])
+                }
+            }
+            while(nextIdx<next.length){
+                merged.push(next[nextIdx++])
+            }
+            return curried(...merged)
+        } 
+       }
+    }
+    return curried;
+}
+
+
+
