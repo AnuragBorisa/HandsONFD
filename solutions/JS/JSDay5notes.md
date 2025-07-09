@@ -161,7 +161,7 @@ cache.size();              // 2 (A, C)
 
 * **`Date.now()` vs. `Date.now`**: Always call `Date.now()` to get the timestamp.
 * **Using `_moveToHead` on a new node**: New nodes must be inserted with `_addNode`, not `_moveToHead` (which assumes existing links).
-* **Implicit globals**: Always declare variables (`const node = …`).
+* **Implicit globals**: Always declare variables (`const node = …`)..
 
 ---
 

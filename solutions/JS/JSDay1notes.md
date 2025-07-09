@@ -40,7 +40,7 @@ export function debounce(fn, wait) {
 3. **Invoke**: When time expires without another call, the callback runs `fn` using the saved `ctx` (the original `this`) and arguments.
 4. **Cancel**: You can call `.cancel()` to drop a pending invocation.
 
-**Use case**: e.g., waiting for the user to stop typing before sending a search request.
+**Use case**: e.g., waiting for the user to stop typing before sending a search request..
 
 ---
 

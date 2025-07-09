@@ -77,5 +77,7 @@ class LRUcache{
      size(){
         return this.map.size;
      }
+     
 
 }
+console.log()
